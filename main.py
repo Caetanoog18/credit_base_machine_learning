@@ -1,5 +1,18 @@
 import tensorflow as tf
+from risk_credit_database import RiskCreditBase
+from pre_processing import PreprocessingCredit
+from credit_database import CreditDatabase
 
-hello = tf.constant("Hello, world")
+risk_credit = RiskCreditBase()
+risk_credit.naive_bayes()
 
-print(hello.numpy().decode('utf-8'))
+credit_pre_processing = PreprocessingCredit()
+credit_pre_processing.pre_processing()
+
+credit = CreditDatabase()
+credit.credit_database()
+
+
+
+
+
